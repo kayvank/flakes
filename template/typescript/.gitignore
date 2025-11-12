@@ -1,0 +1,33 @@
+# Node modules
+node_modules/
+
+# Compiled output
+dist/
+build/
+*.js
+*.js.map
+*.d.ts
+
+# Logs
+log/
+*.log
+
+# Editor/IDE specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# npm debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db

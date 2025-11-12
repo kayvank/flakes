@@ -8,6 +8,7 @@ development nix shells for
 - Rust
 - LaTeX
 - Nix
+- JavaScript, deno+typescript
 
 ## How do I use it
 

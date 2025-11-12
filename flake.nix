@@ -54,6 +54,12 @@
               A devShell template for Rust projects.
             '';
           };
+          typescript = {
+            path = ./template/typescript;
+            description = ''
+              A devShell template for typescript projects.
+            '';
+          };
           tex = {
             path = ./template/tex;
             description = ''
