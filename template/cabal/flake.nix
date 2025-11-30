@@ -35,7 +35,7 @@
       devShells.default =
         pkgs.haskellPackages.shellFor {
           name = "Cabal devShell";
-          withHoogle = true;
+          # withHoogle = true; // uncomment to enable Hoogle support
           buildInputs = with pkgs; [
             zlib
             haskellPackages.fast-tags
@@ -47,6 +47,7 @@
             haskellPackages.cabal-fmt
             # build
             watchexec
+            ghciwatch
             codespell
             # nix
             nixfmt-rfc-style

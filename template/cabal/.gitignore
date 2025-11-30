@@ -35,5 +35,9 @@ var/
 # test/run temp files
 *.log
 tmp/
+var/
+
+# emacs
+.projectile
 
 # End of https://www.toptal.com/developers/gitignore/api/haskell

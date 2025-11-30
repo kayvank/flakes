@@ -49,8 +49,12 @@ library
     -- other-extensions:
     build-depends:
                 , aeson
-                , mtl
+                , bytestring
                 , containers
+                , mtl
+                , optparse-applicative
+                , transformers
+                , text
                 , vector
 
     hs-source-dirs:   src
@@ -64,7 +68,6 @@ executable hello-world
         , hello-world
 
     hs-source-dirs:   app
-    default-language: GHC2021
 
 test-suite hello-world-test
     import:           base,project-config
@@ -72,7 +75,7 @@ test-suite hello-world-test
     -- other-extensions:
     type:             exitcode-stdio-1.0
     hs-source-dirs:   test
-    main-is:          Main.hs
+    main-is:          Spec.hs
     build-depends:
         , base
         , hello-world

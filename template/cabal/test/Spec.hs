@@ -2,5 +2,5 @@
 
 module Main where
 
-main :: IO
+main :: IO ()
 main = putStrLn "under construction"
