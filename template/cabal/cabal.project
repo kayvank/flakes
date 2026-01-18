@@ -1,0 +1,5 @@
+packages:
+  src/optics-lens
+  src/optics-exe
+
+write-ghc-environment-files: never
