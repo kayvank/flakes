@@ -15,7 +15,10 @@ development nix shells for
 ### Haskell
 
 ``` sh
-nix flake init -t "github:kayvank/flakes#cabal-multi-project"
+## cabal multi project
+nix flake init -t "github:kayvank/flakes#multi-project-cabal"
+## cabal single project
+nix flake init -t "github:kayvank/flakes#single-project-cabal"
 ```
 
 ### Rust
@@ -33,5 +36,10 @@ nix flake init -t "github:kayvank/flakes#nix_basic"
 ### local testing of templates
 
 ``` sh
+## a simple nix project
 nix flake init -t  ~/dev/workspaces/q2io/nix/workbook/flakes#nix_basic
+## cabal multi project
+nix flake init -t  ~/dev/workspaces/q2io/nix/workbook/flakes#multi-project-cabal
+## cabal single project
+nix flake init -t  ~/dev/workspaces/q2io/nix/workbook/flakes#single-project-cabal
 ```

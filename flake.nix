@@ -41,6 +41,12 @@
               A basic Nix devShell.
             '';
           };
+          single-project-cabal = {
+            path = ./template/single-project-cabal;
+            description = ''
+              A devShell template for Haskell Single-Project-cabal.
+            '';
+          };
           multi-project-cabal = {
             path = ./template/multi-project-cabal;
             description = ''
