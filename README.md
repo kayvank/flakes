@@ -15,7 +15,7 @@ development nix shells for
 ### Haskell
 
 ``` sh
-nix flake init -t "github:kayvank/flakes#cabal"
+nix flake init -t "github:kayvank/flakes#cabal-multi-project"
 ```
 
 ### Rust
