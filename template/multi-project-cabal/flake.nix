@@ -52,13 +52,18 @@
             # withHoogle = true; // uncomment to enable Hoogle support
             buildInputs = with pkgs; [
               zlib
-              haskellPackages.fast-tags
-              haskell-language-server
-              haskellPackages.implicit-hie
               cabal-install
               fourmolu
               hlint
+              yazi
+
+              haskell-language-server
+              haskellPackages.implicit-hie
               haskellPackages.cabal-fmt
+              haskellPackages.ghc-prof-flamegraph
+              haskellPackages.eventlog2html
+              haskellPackages.ghc-debug-brick
+
               # build
               watchexec
               ghciwatch
@@ -68,6 +73,7 @@
 
               figlet
 
+              ## emacs lsp plugin needs this
               (writeShellScriptBin "haskell-language-server-wrapper" ''
                 #!/bin/bash
                 exec haskell-language-server

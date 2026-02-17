@@ -1,4 +1,4 @@
 module MyLib (someFunc) where
 
 someFunc :: IO ()
-someFunc = putStrLn "someFunc from optics-lens"
+someFunc = putStrLn "someFunc from project1"

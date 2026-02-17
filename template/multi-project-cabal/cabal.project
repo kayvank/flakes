@@ -1,5 +1,6 @@
 packages:
-  src/optics-lens
-  src/optics-exe
+  src/project1
+  src/project2
 
 write-ghc-environment-files: never
+tests: true

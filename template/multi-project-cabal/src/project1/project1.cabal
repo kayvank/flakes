@@ -1,5 +1,5 @@
 cabal-version:   3.4
-name:            optics-exe
+name:            project1
 version:         0.1.0.0
 
 -- synopsis:
@@ -27,10 +27,22 @@ common project-config
 
 -- -ddump-derive
 
-common warnings
-  ghc-options: -Wall
+library
+  import:           base,project-config
+  exposed-modules:  MyLib
+  build-depends:
+    , bytestring
+    , containers
+    , lens
+    , mtl
+    , text
+    , transformers
+    , vector
 
-executable optics-exe
+  hs-source-dirs:   src
+  default-language: GHC2021
+
+executable project1
   import:         base,project-config
   main-is:        Main.hs
 
@@ -38,7 +50,22 @@ executable optics-exe
   -- other-extensions:
   build-depends:
     , bytestring
-    , optics-lens
+    , project1
     , text
 
   hs-source-dirs: app
+
+test-suite project1-test
+  import:         base,project-config
+
+  -- other-modules:
+  -- other-extensions:
+  type:           exitcode-stdio-1.0
+  hs-source-dirs: test
+  main-is:        Spec.hs
+  other-modules:  Tests.NaiveSpecs
+  build-depends:
+    , hspec
+    , project1
+    , tasty
+    , tasty-hspec
