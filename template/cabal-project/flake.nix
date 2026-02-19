@@ -1,5 +1,5 @@
 {
-  description = "Multi project cabal devShell";
+  description = "A nix devShell for Haskell Cabal Project";
 
   inputs = {
     flake-parts.url = "github:hercules-ci/flake-parts";
@@ -48,21 +48,27 @@
           };
 
           devShells.default = pkgs.haskellPackages.shellFor {
-            name = "Multi project cabal devShell";
+            name = "cabal-project";
             # withHoogle = true; // uncomment to enable Hoogle support
             buildInputs = with pkgs; [
               zlib
-              haskellPackages.fast-tags
-              haskell-language-server
-              haskellPackages.implicit-hie
               cabal-install
               fourmolu
               hlint
+              yazi
+
+              haskell-language-server
+              haskellPackages.implicit-hie
               haskellPackages.cabal-fmt
+              haskellPackages.ghc-prof-flamegraph
+              haskellPackages.eventlog2html
+              haskellPackages.ghc-debug-brick
+
               # build
               watchexec
               ghciwatch
               codespell
+
               # nix
               nixfmt-rfc-style
 

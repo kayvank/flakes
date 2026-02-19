@@ -34,23 +34,23 @@
         };
       flake = {
         templates = rec {
-          default = multi-project-cabal;
+          default = cabal-projects;
           nix = {
             path = ./template/nix;
             description = ''
               A basic Nix devShell.
             '';
           };
-          single-project-cabal = {
-            path = ./template/single-project-cabal;
+          cabal-project = {
+            path = ./template/cabal-project;
             description = ''
-              A devShell template for Haskell Single-Project-cabal.
+              A devShell template for Haskell cabal-project.
             '';
           };
-          multi-project-cabal = {
-            path = ./template/multi-project-cabal;
+          cabal-projects = {
+            path = ./template/cabal-projects;
             description = ''
-              A devShell template for Haskell Multi-Project-cabal projects.
+              A devShell template for Haskell Multi cabal projects.
             '';
           };
           nix_basic = {

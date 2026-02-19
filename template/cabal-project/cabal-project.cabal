@@ -1,5 +1,5 @@
 cabal-version:   3.4
-name:            single-project-cabal
+name:            hello-world
 version:         0.1.0.0
 
 -- synopsis:
@@ -35,18 +35,25 @@ library
   -- other-modules:
   -- other-extensions:
   build-depends:
-    , array
     , bytestring
     , containers
     , lens
     , mtl
     , text
+    , transformers
     , vector
 
   hs-source-dirs:   src
   default-language: GHC2021
 
-test-suite single-project-cabal-test
+executable hello-world-exe
+  import:           base,project-config
+  main-is:          Main.hs
+  hs-source-dirs:   app
+  default-language: GHC2021
+  build-depends:    hello-world
+
+test-suite hello-world-test
   import:         base,project-config
 
   -- other-modules:
@@ -54,7 +61,9 @@ test-suite single-project-cabal-test
   type:           exitcode-stdio-1.0
   hs-source-dirs: test
   main-is:        Spec.hs
+  other-modules:  Tests.NaiveSpecs
   build-depends:
-    , single-project-cabal
+    , hello-world
+    , hspec
     , tasty
-    , tasty-hunit
+    , tasty-hspec
