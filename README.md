@@ -3,8 +3,8 @@ flakes
 Collection of nix flake templates
 
 ## What is this
-development nix shells for 
-- Haskell
+`nix develop` shell for 
+- Haskell, single of multi project
 - Rust
 - LaTeX
 - Nix
@@ -13,12 +13,22 @@ development nix shells for
 ## How do I use it
 
 ### Haskell
++ Multi project:
 
 ``` sh
-## cabal multi project
 nix flake init -t "github:kayvank/flakes#cabal-projects"
-## cabal single project
+git init && git add flake.nix cabal.project ./src 
+nix develop 
+cabal update && cabal build all && cabal testall
+```
+
++ single cabal project:
+
+``` sh
 nix flake init -t "github:kayvank/flakes#cabal-project"
+git init && git add ./cabal-project.cabal flake.nix
+nix develop 
+cabal update && cabal build && cabal test
 ```
 
 ### Rust
@@ -39,7 +49,7 @@ nix flake init -t "github:kayvank/flakes#nix_basic"
 ## a simple nix project
 nix flake init -t  ~/dev/workspaces/q2io/nix/workbook/flakes#nix_basic
 ## cabal multi project
-nix flake init -t  ~/dev/workspaces/q2io/nix/workbook/flakes#multi-project-cabal
+nix flake init -t  ~/dev/workspaces/q2io/nix/workbook/flakes#cabal-projects
 ## cabal single project
-nix flake init -t  ~/dev/workspaces/q2io/nix/workbook/flakes#single-project-cabal
+nix flake init -t  ~/dev/workspaces/q2io/nix/workbook/flakes#cabal-project
 ```

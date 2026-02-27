@@ -10,17 +10,18 @@ To start your nix flake project:
 
 + If you have cloned the repository, point to the local flake as such:
 ``` sh
-nix flake init -t ~/dev/q2io/nix/flakes#multi-project-cabal
+nix flake init -t ~/dev/q2io/nix/flakes#cabal-projects
 ```
 
 + Or, point to the github flake:
 
 ``` sh
-nix flake init -t "github:kayvank/flakes#multi-project-cabal"
+nix flake init -t "github:kayvank/flakes#cabal-projects"
 ```
 
 
 ```sh
+nix develop
 cabal update && cabal build all && cabal test all
 cabal exec $(cabal exec which project1)
 cabal exec $(cabal exec which project2)
