@@ -23,13 +23,9 @@
         {
           devShells.default = pkgs.mkShell {
             name = "nix devShell";
-            buildInputs =
-              with pkgs;
-              with pkgs;
-              [
-                nil
-                alejandra
-              ];
+            buildInputs = with pkgs; [
+              alejandra
+            ];
           };
         };
       flake = {
@@ -38,7 +34,7 @@
           nix = {
             path = ./template/nix;
             description = ''
-              A basic Nix devShell.
+              A basic Nix devShell for Haskell cabal with sub-projects.
             '';
           };
           cabal-project = {

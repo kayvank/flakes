@@ -16,9 +16,9 @@ development nix shells for
 
 ``` sh
 ## cabal multi project
-nix flake init -t "github:kayvank/flakes#multi-project-cabal"
+nix flake init -t "github:kayvank/flakes#cabal-projects"
 ## cabal single project
-nix flake init -t "github:kayvank/flakes#single-project-cabal"
+nix flake init -t "github:kayvank/flakes#cabal-project"
 ```
 
 ### Rust
